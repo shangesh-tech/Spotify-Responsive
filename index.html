@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left-sidebar {
+            height: 100%;
+            width: 350px;
+            position: fixed;
+            background-color: black;
+            text-align: left;
+            left: 0px;
+            top: 0px;
+        }
+
+        #left-sidebar-cont1 {
+            padding: 20px;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        #left-sidebar-cont1 img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .home {
+            background-color: #282828;
+            width: 250px;
+            padding: 2px;
+            border-radius: 3px;
+            margin: 10px auto;
+        }
+
+        .home img {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .home h1 {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        #left-sidebar-cont3 {
+            padding: 20px;
+            position: relative;
+            bottom: 70px;
+            right: 20px;
+            margin-top: 60px;
+            margin-inline: 30px;
+        }
+
+        #left-sidebar-cont4 {
+            padding: 20px;
+            position: fixed;
+            bottom: 100px;
+        }
+
+        .homepage {
+            padding-top: 30px;
+            height: 100%;
+            position: fixed;
+            width: calc(100% - 350px);
+            left: 350px;
+            padding-left: 30px;
+            background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(33,33,33,1) 48%, rgba(33,33,33,1) 100%);
+        }
+
+        .section1, .section2 {
+            padding: 10px;
+        }
+
+        .section1 article, .section2 article {
+            display: inline-block;
+            padding: 6px;
+            width: 350px;
+            background-color: #303030;
+            border-radius: 7px;
+            margin: 5px;
+        }
+
+        .musicplay {
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            gap: 20px;
+            background-color: #181818;
+            width: 100%;
+            align-items: center;
+            padding: 10px;
+        }
+
+        /* MEDIA QUERIES */
+        @media screen and (max-width: 1200px) {
+            .left-sidebar {
+                width: 280px;
+            }
+
+            .homepage {
+                left: 280px;
+                width: calc(100% - 280px);
+            }
+
+            .section1 article, .section2 article {
+                width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .left-sidebar {
+                width: 240px;
+            }
+
+            .homepage {
+                left: 240px;
+                width: calc(100% - 240px);
+            }
+
+            .section1 article, .section2 article {
+                width: 240px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .left-sidebar {
+                width: 200px;
+            }
+
+            .homepage {
+                left: 200px;
+                width: calc(100% - 200px);
+            }
+
+            .section1 article, .section2 article {
+                width: 180px;
+            }
+
+            .musicplay img {
+                height: 60px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .left-sidebar {
+                width: 100px;
+            }
+
+            .homepage {
+                left: 100px;
+                width: calc(100% - 100px);
+                padding-left: 10px;
+            }
+
+            .section1 article, .section2 article {
+                width: 120px;
+            }
+
+            .musicplay {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .musicplay img {
+                height: 50px;
+            }
+
+            .musicplay p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .left-sidebar {
+                display: none;
+            }
+
+            .homepage {
+                width: 100%;
+                left: 0;
+                padding-left: 10px;
+            }
+
+            .section1 article, .section2 article {
+                width: 100%;
+            }
+
+            .musicplay {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .musicplay img {
+                height: 40px;
+            }
+
+            .musicplay p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="left-sidebar">
+        <section id="left-sidebar-cont1">
+            <img id="logo" src="assets/Spotify logo.png" style="height: 50px; width: 160px;">
+            <div class="home">
+                <img id="left-sidebar-icon1" src="assets/Home.png" style="height: 30px;">
+                <h1 id="left-sidebar-text1">Home</h1>
+            </div>
+            <img id="left-sidebar-icon2" src="assets/Search.png" style="height: 30px;">
+            <h1 id="left-sidebar-text2">Search</h1>
+            <img id="left-sidebar-icon3" src="assets/Your library.png" style="height: 30px;">
+            <h1 id="left-sidebar-text3">Your Library</h1>
+            <img id="left-sidebar-icon4" src="assets/Create.png" style="height: 30px;">
+            <h1 id="left-sidebar-text4">Create Playlist</h1>
+            <img id="left-sidebar-icon5" src="assets/Liked.png" style="height: 30px;">
+            <h1 id="left-sidebar-text5">Liked Songs</h1>
+            <img id="left-sidebar-icon6" src="assets/your episodes.png" style="height: 30px;">
+            <h1 id="left-sidebar-text6">Your Episodes</h1>
+        </section>
+        <section id="left-sidebar-cont3">
+            <h1>FAV</h1>
+            <h1>Daily Mix1</h1>
+            <h1>Discover Weekly</h1>
+            <h1>Malayalam</h1>
+            <h1>Dance / Electronic mix</h1>
+            <h1>EDM / Popular</h1>
+        </section>
+        <section id="left-sidebar-cont4">
+            <img id="left-sidebar-icon7" src="./assets/download.png" style="height: 30px; width: 30px;">
+            <h1 id="left-sidebar-text13">Install App</h1>
+        </section>
+    </div>
+
+    <div class="homepage">
+        <div style="display: flex;">
+            <img src="./assets/top arrow navigation.png" style="height: 50px;" alt="">
+            <img src="./assets/User.png" style="width: 180px; margin-left: auto;" alt="">
+        </div>
+        <h1>Good Morning</h1>
+        <div class="section1">
+            <article id="block_cont1">
+                <img id="block_image1" src="assets/Liked.png" style="height: 80px;">
+                <b>Liked Songs</b>
+            </article>
+            <article id="block_cont2">
+                <img id="block_image2" src="assets/image4.png" style="height: 80px;">
+                <b>Neffex playlist</b>
+            </article>
+            <article id="block_cont3">
+                <img id="block_image3" src="assets/image3.png" style="height: 80px;">
+                <b>K / DA</b>
+            </article>
+        </div>
+
+        <h2>Shows you might like</h2>
+        <div class="section2">
+            <article id="block2_cont1">
+                <img src="assets/image9.png" height="150px">
+                <h1>Weekly Motivations</h1>
+                <p>Trending songs</p>
+            </article>
+            <article id="block2_cont2">
+                <img src="assets/image8.png" height="150px">
+                <h1>Motivated self</h1>
+                <p>The best of pop</p>
+            </article>
+            <article id="block2_cont3">
+                <img src="assets/image7.png" height="150px">
+                <h1>Words beyond acts</h1>
+                <p>Newest songs</p>
+            </article>
+        </div>
+    </div>
+
+    <div class="musicplay">
+        <img id="songposter" src="assets/Liked.png" style="height: 80px; width: 80px;">
+        <div>
+            <p id="songtext">Liked Songs</p>
+            <p id="songtext">Neffex Playlist</p>
+        </div>
+        <img id="songplay" src="assets/music controller.png" style="height: 70px;">
+    </div>
+</body>
+</html>
